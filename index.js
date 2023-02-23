@@ -26,47 +26,58 @@ let userData=JSON.parse(localStorage.getItem("account")) || []
     localStorage.setItem("account",JSON.stringify(userData))
      localStorage.setItem("mail",mail)
    localStorage.setItem("password",password)
+ 
+  
+  for(let i=0;i<userData.length;i++)
+    {
+      if(mail==userData[i].mail && password==userData[i].password)
+      {
+        alert("Login Successful")
+       
+        
+      }
+    }
   })
+ 
+  var images = document.getElementsByTagName("img");
+for(var i = 0; i < images.length; i++) {
+    var image = images[i];
+    image.onclick = function(event) {
+         window.location.href = this.id + '.html';
+    };
+}
+
+// let cart=document.getElementById("addtocart")
+// cart.addEventListener("click",function(){
 
 
+
+// })
+
+ let result;
   async function fetchData(){
+   
     try{
       let res=await fetch("https://63f4d1b82213ed989c4b4758.mockapi.io/product")
      
-      res= await res.json()
-      displayData(res.data)
+      result= await res.json()
+      // displayData(res.data)
       //  FilterData(res.data)
-        //  console.log(res)
+           console.log(res)
     }
     catch(err){
       console.log("error",err)
     }
-  }
+   }
   fetchData()
-  // let filterBy=document.getElementById("filter")
-  // filterBy.addEventListener("change",()=>
-  // {
-  //   fetchData()
-  // })
-  // function FilterData(data)
-  // {
-  //   if(filterBy.value==="")
-  //   {
-  //     displayData(data)
-  //   }
-  //   // else{
-  //   //   data=data.filter((ele)=>{
-  //   //     return ele.rating==filterBy.value;
-  //   //   })
-  //   //   displayData(data)
-  //   // }
-  //   //  console.log("res",data)
-  // }
-  let MedicineCart=JSON.parse(localStorage.getItem("medicine")) || []
+  displayData(result)
+
+  
+  let MedicineCart=JSON.parse(localStorage.getItem("medicine")) 
   let container=document.getElementById("medicine-container")
   function displayData(data)
   {
-     container.innerHTML=""
+    //  container.innerHTML=""
     data.forEach((medi) => {
       let medicineContainer=document.createElement("div")
       let category=document.createElement("h4")
@@ -102,8 +113,8 @@ let userData=JSON.parse(localStorage.getItem("account")) || []
       container.append(medicineContainer)
       
     });
-   
-     console.log("display",data)
+  //  displayData()
+    //  console.log("display",data)
   }
  
   // displayData(res.data)
