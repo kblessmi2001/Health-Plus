@@ -8,90 +8,190 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="container">
-        <div  class="logo">
-          <img class="logo_img" src="./HEALTH PLUS (3).png" alt="">
-        </div>
-        <form class="nosubmit">
-            <input class="nosubmit" type="search" placeholder="Search for productus & brands...">
-        </form>
-        <div class="log">
-          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button><div id="id01" class="modal">
-            <div class="modal-content animate" >
-              <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-              </div>
-              <div id="card">
-                  <div class="slideshow-container1">      
+  <div id="medicine-container">
+
+  </div>
+  <div id="container">
+    <div  class="logo">
+      <img class="logo_img" src="./HEALTH PLUS (3).png" alt="">
+    </div>
+      <form class="nosubmit">
+        <input class="nosubmit" type="search" placeholder="Search for productus & brands...">
+      </form>
+      <div class="log">
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+      <div id="id01" class="modal" >
+        <div class="modal-content animate" >
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+          <div id="card">
+              <div class="slideshow-container1">      
                 <form class="mySlides fade">
-                          <img id="imaages" src="https://static1.hkrtcdn.com/hknext/static/media/login/slider/1.svg" alt="" >
-                          <div class="slide_inside">
-                          <h4>Wide range of Original & Authentic Nutritional Products</h4>
-                          <p>We strive to provide 100% authentic products to our customers</p>
-                      </div>
-                      </div>
+                  <img id="imaages" src="https://static1.hkrtcdn.com/hknext/static/media/login/slider/1.svg" alt="" >
+                    <div class="slide_inside">
+                      <h4>Wide range of Original & Authentic Nutritional Products</h4>
+                      <p>We strive to provide 100% authentic products to our customers</p>
+                    </div>
+                  </div>
                   <div class="verticalLine"></div>
           
-              <div class="container">
+                 <div class="container">
                   <div>
-                  <img  class="img_avatar" src="https://tse1.mm.bing.net/th?id=OIP.1qVutqafhdg1DyVSwcNJHQHaHa&pid=Api&rs=1&c=1&qlt=95&w=122&h=122" alt="">
-              </div>
-            
+                    <img  class="img_avatar" src="https://tse1.mm.bing.net/th?id=OIP.1qVutqafhdg1DyVSwcNJHQHaHa&pid=Api&rs=1&c=1&qlt=95&w=122&h=122" alt="">
+                  </div>
                   <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" id="email" required>
-          
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" id="password" required>
-                  
-                <button type="submit">Submit</button>
-              </form>
+                  <input type="text" placeholder="Enter Username" id="email" required>
+            
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" id="password" required>
+                    
+                  <button type="submit">Submit</button>
+                </form>
                
+              </div>
             </div>
           </div>
-          </div>
         </div>
-        </div>
-        <div class="icon" >
-        <img src="https://tse4.mm.bing.net/th?id=OIP.fYPFuy5ypGwIotPEJMp_BAHaHa&pid=Api&P=0" alt="error">
-        </div>
+      </div>
+      <div class="icon" >
+        <img src="https://tse4.mm.bing.net/th?id=OIP.fYPFuy5ypGwIotPEJMp_BAHaHa&pid=Api&P=0"   id="addToCart" />
+      </div>
     </div>
     <hr>
     
-      <div class="middle_part">
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter-left" viewBox="0 0 16 16">
-              <path d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-            </svg> Shop by category
-                <!-- <select name="" id="filter">
-                  <option value="">Select category</option>
-                  <option value="Tools">Tools</option>
-                  <option value="Beauty">Beauty</option>
-                  <option value="Clothing">Clothing</option>
-                  <option value="Computers">Computers</option> -->
-                    <!-- <option value="Sports Nutrition">Sports Nutrition</option>
-                    <option value="Vitamins & Supplements">Vitamins & Supplements</option>
-                    <option value="Ayurveda & Herbs">Ayurveda & Herbs</option>
-                    <option value="Health Food & Drinks">Health Food & Drinks</option>
-                    <option value="Fitness">Fitness</option>
-                    <option value="Wellness">Wellness</option> -->
+    <div class="middle_part">
+      <div class="dropdown">
+        <button class="shop">Shop by category </button>
+          <div class="dropdown-content">
+           
+            <div class="side">
+            <a href="#">Sports Nutrition</a>
           
-              </select> 
-            </button><div class="category">Best Sellers</div>
-            <div>Brands</div>
-            <div> Deals</div>
-           <div> Blogs</div>
-           <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gift" viewBox="0 0 16 16">
-            <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zM1 4v2h6V4H1zm8 0v2h6V4H9zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5V7zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5H7z"/>
-          </svg> Gift Card</div>
-            <div> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-              <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-            </svg> Customer Support</div>
-           <div> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-          </svg> Store Locator</div>
+            <table class="tab1" >
+              <tr class="gap1">
+              <th>Proteins</th>
+              <th>Gainers</th>
+              <th>Protein Food</th>
+              <th>Pre/Post Workout</th>
+              <th>Workout Essentials</th>
+            </tr>
+            <tr class="gap1">
+              <td>Whey Protiens</td>
+              <td>Weight Gainers</td>
+              <td>Peanut Butter</td>
+              <td>Pre-Workout</td>
+              <td>Fat Barners</td>
+            </tr>
+            <tr class="gap1">
+              <td>Beginners Whey Protien</td>
+              <td>Mass Gainers</td>
+              <td>Muesh</td>
+              <td>Creatine</td>
+              <td>Consult Sevice</td>
+            </tr>
+            <tr class="gap1">
+              <td>Whey Protiens Isolate</td>
+              <td>Heral Weight Gainers</td>
+              <td>Protien Shakes</td>
+              <td>Beta Alanine</td>
+              <td>L Carnitine</td>
+            </tr>
+            <tr class="gap1">
+              <td>Raw Whey Protiens</td>
+              <td></td>
+              <td>Oats</td>
+              <td>BCAAs</td>
+              <td>Multivitamins for</td>
+            </tr>
+            <tr class="gap1">
+              <td>Plant Protiens</td>
+              <td></td>
+              <td>Cereals</td>
+              <td>Carb Blends</td>
+              <td>Body Building</td>
+            </tr>
+            <tr class="gap1">
+              <td>Protiens for Women</td>
+              <td></td>
+              <td>Granola</td>
+              <td>Electrolytes</td>
+              <td>Pre Hormone</td>
+            </tr>
+            <tr class="gap1">
+              <td>Proties Blends</td>
+              <td></td>
+              <td>Protien Bars</td>
+              <td>EAA</td>
+              <td>ZMA</td>
+            </tr>
+            <tr class="gap1">
+              <td>Casein Proteins</td>
+              <td></td>
+              <td>Protien Water</td>
+              <td>Nitric Oxide</td>
+              <td></td>
+            </tr>
+            <tr class="gap1">
+              <td>Soy Protiens</td>
+              <td></td>
+              <td></td>
+              <td>Other Supports</td>
+              <td></td>
+            </tr>
+            <tr class="gap1">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Cirtulline Malate</td>
+              <td></td>
+            </tr>
+       
+            </table>
+     
+          </div>
+              <a href="#">Vitamins & Supplements</a>
+              <a href="#">Ayurveda & Herbs</a>
+              <a href="#">Health Food & Drinks</a>
+              <a href="#">Fitness</a>
+              <a href="#">Wellness</a>
+          </div>
+      </div>
+             
+      <div class="dropdown">
+        <button class="hover_txt">Best Sellers </button>
+        <div class="dropdown-content">
+          <a href="#">Sports Nutrition</a>
+            <a href="#">Health Nutrition</a>
+            <a href="#">Fitness</a>
+            <a href="#">Wellness</a>
         </div>
+      </div>
+      <div class="hover_txt">Brands</div>
+      <div class="hover_txt"> Deals</div>
+      <div class="hover_txt"> Blogs</div>
+      <div class="hover_txt">Gift Card</div>
+      <div class="dropdown">
+        <button class="hover_txt" >Customer Support </button>
+          <div class="dropdown-content">
+            <a href="#">Chat with us</a>
+            <a href="#">Ask our Experts</a>
+            <a href="#">Return policy</a>
+            <a href="#">FAQs</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#"><div class="address">
+                For Support & Order Enquiries
+                Call us at : 0124-4616444
+                10 AM to 7 PM</div></a>
+          </div>
+      </div>
+      <div class="hover_txt">Store Locator</div>
+    </div>
+
         <div class="sent">
-            <div>India's Largest D2C Nutrition Platform</div>
-        </div>
+          <div>India's Largest D2C Nutrition Platform</div>
+      </div>
+    
        
             <div class="heading">
               <h1>Price Slash Alert</h1>
@@ -136,6 +236,21 @@
             </div>
          </div>
 
+         <div class="pic">
+         <div>
+          <img src="https://img9.hkrtcdn.com/24442/bnr_2444148_o.png" alt="">
+         </div>
+         <div>
+          <img src="https://img7.hkrtcdn.com/24444/bnr_2444326_o.jpg" alt="">
+         </div>
+         <div>
+          <img src="https://img1.hkrtcdn.com/24442/bnr_2444150_o.jpg" alt="">
+         </div>
+         <div>
+          <img src="https://img5.hkrtcdn.com/24442/bnr_2444154_o.jpg" alt="">
+         </div>
+        </div>
+
 
          <div class="heading">
           <h1>Top Deals</h1>
@@ -177,6 +292,23 @@
             <button class="addtocart">Add to Cart</button>
           </div>
         </div>
+   </div>
+   <div class="heading1">
+   <h1>Top Selling Combos</h1>
+   </div>
+   <div class="pic">
+    <div>
+     <img src="https://img9.hkrtcdn.com/24441/bnr_2444088_o.jpg" alt="">
+    </div>
+    <div>
+     <img src="https://img1.hkrtcdn.com/24441/bnr_2444090_o.jpg" alt="">
+    </div>
+    <div>
+     <img src="https://img1.hkrtcdn.com/24442/bnr_2444190_o.jpg" alt="">
+    </div>
+    <div>
+     <img src="https://img3.hkrtcdn.com/24442/bnr_2444192_o.jpg" alt="">
+    </div>
    </div>
 
    <div class="heading">
@@ -220,9 +352,7 @@
   </div>
 </div>
 </div>
-         <div id="medicine-container">
-
-         </div>
+        
 
             <div id="brand">
               <h1>Brand Range</h1>
@@ -277,10 +407,69 @@
           </div>
 
           <div id="footer">
-            <div class="footer_part">
+           
             <img class="logo_image" src="./HEALTH PLUS (3).png" alt="">
-            <table class="tab">
-              <tr>
+            <div class="foot">
+              <div class="footer_part">
+              <div class="footer-col brands">
+             <ul> <li class="footer-heading">Health Plus</li></ul>
+              <ul>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Refer &amp; Earn</li>
+                <li>Loyalty Program </li>
+                <li>Blogs, Videos &amp; More </li>
+                <li>Brand Directory </li>
+                <li>Authenticity Guaranteed </li>
+                <li>Careers </li>
+              </ul>
+              </div>
+                  <div class="footer-col brands">
+                    <ul><li class="footer-heading">Brands</li></ul>
+                    <ul>
+                      <li>MuscleBlaze</li>
+                      <li>Fit Foods</li>
+                      <li>HK Vitals</li>
+                      <li>TrueBasics</li>
+                      <li>Gritzo</li>
+                      <li>bGREEN</li>
+                    </ul>
+                  </div>
+                  <div class="footer-col brands">
+                    <ul><li class="footer-heading">Health &amp; Fitness</li></ul>
+                    <ul>
+                      <li>Hair &amp; Skin Care</li>
+                      <li>Sports Nutrition</li>
+                      <li>Vitamins &amp; Supplements</li>
+                      <li>Ayurveda &amp; Herbs</li>
+                      <li>Health Food &amp; Drinks</li>
+                      <li>Fitness</li>
+                      <li>Wellness</li>
+                    </ul>
+                  </div>
+                  <div class="footer-col brands">
+                   <ul> <li class="footer-heading">Quick links</li></ul>
+                    <ul>
+                      <li>My Account</li>
+                      <li>Track Your Order</li>
+                      <li>Store Locator</li>
+                      <li>HK Cash</li>
+                      <li>HK Coupons</li>
+                      <li>FAQs</li>
+                      <li>Sell On HealthKart</li>
+                    </ul>
+                  </div>
+                  <div class="footer-col brands">
+                   <ul><li class="footer-heading">Contact Us</li></ul> 
+                    <ul>
+                      <li class="contact-item flex">care@healthkart.com</li>
+                      <li class="contact-item flex">0124-4616444</li>
+                      <li class="contact-item flex">
+                        The Presidency Tower, Tower-B, 2nd Floor, 46/4, Mehrauli Rd opp. government girls college, Anamika Enclave, Sector 14, Gurugram, Haryana</li>
+                      </ul>
+                    </div>
+                  </div>
+              <!-- <tr class="gap">
                 <th>Health Plus</th>
                 <th>Brands</th>
                 <th>Health Fitness</th>
@@ -335,36 +524,69 @@
                 <td>FAQS</td>
                 <td>Haryana</td>
                </tr>
-            </table>
+            </table> -->
+            <div id="subscribe">
+            <div>
+              <h4 style="padding-left: 20px;">Subscribe</h4>
+              <input type="email" id="mailid" placeholder="Enter mail">
+              <p style="padding-left: 20px;"><span style="color:red;">*</span>Get newsletters and exclusive offers</p>
+            </div>
+            <div class="googleApp1">
           
+              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/Return.png" alt="">
+            
+            
+              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/authenticity.png" alt="">
+           
+              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/secure.png" alt="">
+           
+          </div>
+            <p style="padding-left: 20px;">Follow Us On</p>
+            <div class="follow">
+              <div>
+                <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/facebook-new.svg" alt="">
+              </div>
+              <div>
+                <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/Instagram-new.svg" alt="">
+              </div>
+              <div>
+                <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/LinkedIn-new.svg" alt="">
+              </div>
+              <div>
+                <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/Youtube-new.svg" alt="">
+              </div>
+              <div>
+                <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/twitter-new.svg" alt="">
+              </div>
+              <div>
+                <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pinterest-icon.svg" alt="">
+              </div>
+            </div>
+            <p>Download Our App</p>
 
-          <div class="footer_img">
-            <div>
-              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay1.svg" alt="">
-            </div>
-            <div>
-              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay2.svg" alt="">
-            </div>
-            <div>
-              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay3.svg" alt="">
-            </div>
-            <div>
-              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay4.svg" alt="">
-            </div>
-            <div>
-              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay5.svg" alt="">
-            </div>
-            <div>
-              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay6.svg" alt="">
+            <div class="googleApp">
+                <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/google-badge.svg" alt="">
+                <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/app-store-new.svg" alt="">
             </div>
           </div>
+        </div>
+          <div class="footer_img">
+              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay1.svg" alt="">
+              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay2.svg" alt="">
+              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay3.svg" alt="">
+              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay4.svg" alt="">
+              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay5.svg" alt="">
+              <img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pay6.svg" alt="">
+           
+         
+        </div>
           <br>
           <hr>
           <div class="copyright">
           <div>Copyright &copy; 2023,HealthKart.com, or its affiliates</div>
           <div>Terms & Conditions  |  Delivery Policy  |  Privacy Policy  |  Disclaime  |  Returns Policy</div>
           </div>
-        </div>
+        
       </div>
         
 </body>
