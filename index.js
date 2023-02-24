@@ -39,10 +39,10 @@ let userData=JSON.parse(localStorage.getItem("account")) || []
     }
   })
  
-  var images = document.getElementsByTagName("img");
-for(var i = 0; i < images.length; i++) {
-    var image = images[i];
-    image.onclick = function(event) {
+  var imagesEl = document.getElementsByTagName("img");
+for(var i = 0; i < imagesEl.length; i++) {
+    var imageEle = imagesEl[i];
+    imageEle.onclick = function(event) {
          window.location.href = this.id + '.html';
     };
 }
@@ -54,48 +54,49 @@ for(var i = 0; i < images.length; i++) {
 
 // })
 
- let result;
+
   async function fetchData(){
    
     try{
-      let res=await fetch("https://63f4d1b82213ed989c4b4758.mockapi.io/product")
+      let res=await fetch("https://kblessmi2001.github.io/medicine_data/data.json")
      
-      result= await res.json()
-      // displayData(res.data)
-      //  FilterData(res.data)
-           console.log(res)
+      res= await res.json()
+          displayData(res)
+      
+      //  console.log(res.medicine)
     }
     catch(err){
       console.log("error",err)
     }
-   }
-  fetchData()
-  displayData(result)
+  }
+    fetchData()
 
-  
+     
   let MedicineCart=JSON.parse(localStorage.getItem("medicine")) 
   let container=document.getElementById("medicine-container")
-  function displayData(data)
-  {
-    //  container.innerHTML=""
-    data.forEach((medi) => {
+   function displayData(data)
+   {
+     container.innerHTML=""
+     
+      data.medicine.forEach((medi) => {
       let medicineContainer=document.createElement("div")
       let category=document.createElement("h4")
       let rating=document.createElement("h5")
+      let discount=document.createElement("h5")
       let id=document.createElement("p")
       let image=document.createElement("img")
-      let name=document.createElement("h2")
+      let name=document.createElement("h3")
       let price=document.createElement("h4")
       let addtocart=document.createElement("button")
 
-      category.innerText=medi.department;
+      category.innerText=medi.category;
       rating.innerText=`${medi.rating}`;
       id.innerText=medi.id;
-      image.src=medi.avatar;
+      image.src=medi.image;
       name.innerText=medi.name;
       price.innerText=`₹${medi.price}`;
       addtocart.innerText="Add To Cart";
-      
+      discount.innerText=`${medi.discount}%`
       addtocart.addEventListener("click",()=>
         {
           if(checkDuplicate(medi))
@@ -103,21 +104,19 @@ for(var i = 0; i < images.length; i++) {
             alert("Already Added To Cart")
           }
           else{
-            EmployeeCart.push({...medi})
+            MedicineCart.push({...medi})
           localStorage.setItem("medicine",JSON.stringify(MedicineCart))
           alert("Successfully added")
           }
         }) 
      
-      medicineContainer.append(image,name,rating,price,category,id,addtocart)
+      medicineContainer.append(image,name,rating,discount,price,category,addtocart)
       container.append(medicineContainer)
       
     });
-  //  displayData()
-    //  console.log("display",data)
+    console.log("display",data)
   }
- 
-  // displayData(res.data)
+
      function checkDuplicate(medi)
     {
      for(let i=0;i<MedicineCart.length;i++)
@@ -128,6 +127,6 @@ for(var i = 0; i < images.length; i++) {
     }
         return false
      }
+      // displayData()
 
 
- 
