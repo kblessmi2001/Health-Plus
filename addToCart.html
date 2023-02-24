@@ -6,49 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #medicine-container{
+        background-color: aqua;
+    }
+</style>
+
+
+
 <body>
-</div>
-<a href="#">Vitamins & Supplements</a>
-<a href="#">Ayurveda & Herbs</a>
-<a href="#">Health Food & Drinks</a>
-<a href="#">Fitness</a>
-<a href="#">Wellness</a>
-</div>
-</div>
+   
+ <h1>Add To Cart</h1>
+ <div id="medicine-container">
 
-<div class="dropdown">
-<button class="hover_txt">Best Sellers </button>
-<div class="dropdown-content">
-<a href="#">Sports Nutrition</a>
-<a href="#">Health Nutrition</a>
-<a href="#">Fitness</a>
-<a href="#">Wellness</a>
-</div>
-</div>
-<div class="hover_txt">Brands</div>
-<div class="hover_txt"> Deals</div>
-<div class="hover_txt"> Blogs</div>
-<div class="hover_txt">Gift Card</div>
-<div class="dropdown">
-<button class="hover_txt" >Customer Support </button>
-<div class="dropdown-content">
-<a href="#">Chat with us</a>
-<a href="#">Ask our Experts</a>
-<a href="#">Return policy</a>
-<a href="#">FAQs</a>
-<a href="#">Terms & Conditions</a>
-<a href="#"><div class="address">
-  For Support & Order Enquiries
-  Call us at : 0124-4616444
-  10 AM to 7 PM</div></a>
-</div>
-</div>
-<div class="hover_txt">Store Locator</div>
-</div>
-
-<div class="sent">
-<div>India's Largest D2C Nutrition Platform</div>
-</div>
-
+ </div>
 </body>
 </html>
+<script>
+  async function fetchData(){
+   
+   try{
+     let res=await fetch("https://kblessmi2001.github.io/medicine_data/data.json")
+    
+     res= await res.json()
+         displayData(res)
+     
+     //  console.log(res.medicine)
+   }
+   catch(err){
+     console.log("error",err)
+   }
+ }
+   fetchData()
+
+ 
+     
+  let MedicineCart=JSON.parse(localStorage.getItem("medicine")) 
+  let container=document.getElementById("medicine-container")
+   function displayData()
+   {
+     container.innerHTML=""
+     
+     MedicineCart.medicine.forEach((medi) => {
+      let medicineContainer=document.createElement("div")
+      let category=document.createElement("h4")
+      let rating=document.createElement("h5")
+      let discount=document.createElement("h5")
+      let id=document.createElement("p")
+      let image=document.createElement("img")
+      let name=document.createElement("h3")
+      let price=document.createElement("h4")
+      let deleted=document.createElement("button")
+
+      category.innerText=medi.category;
+      rating.innerText=`${medi.rating}`;
+      id.innerText=medi.id;
+      image.src=medi.image;
+      name.innerText=medi.name;
+      price.innerText=`₹${medi.price}`;
+     deleted.innerText="Delete";
+      discount.innerText=`${medi.discount}%`
+    deleted.addEventListener("click",()=>
+        {
+            MedicineCart=MedicineCart.filter((ele)=>
+            {
+                return ele.id != medi.id
+            })
+            localStorage.setItem("medicine",JSON.stringify(MedicineCart))
+            displayData()
+        }) 
+     
+      medicineContainer.append(image,name,rating,discount,price,category,deleted)
+      container.append(medicineContainer)
+      
+    });
+    
+  }
+
+    displayData()
+</script>
+
