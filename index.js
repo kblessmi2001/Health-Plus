@@ -3,14 +3,14 @@ var modal = document.getElementById('id01');
 var btn = document.getElementById("login");
 var span = document.getElementsByClassName("close")[0];
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
 
 let userData=JSON.parse(localStorage.getItem("account")) || []
   let formData= document.querySelector(".mySlides")
@@ -39,94 +39,17 @@ let userData=JSON.parse(localStorage.getItem("account")) || []
     }
   })
  
-  var imagesEl = document.getElementsByTagName("img");
-for(var i = 0; i < imagesEl.length; i++) {
-    var imageEle = imagesEl[i];
-    imageEle.onclick = function(event) {
-         window.location.href = this.id + '.html';
-    };
-}
-
-// let cart=document.getElementById("addtocart")
-// cart.addEventListener("click",function(){
-
-
-
-// })
-
-
-  async function fetchData(){
-   
-    try{
-      let res=await fetch("https://kblessmi2001.github.io/medicine_data/data.json")
-     
-      res= await res.json()
-          displayData(res)
-      
-      //  console.log(res.medicine)
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
     }
-    catch(err){
-      console.log("error",err)
-    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-0].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
   }
-    fetchData()
-
-     
-  let MedicineCart=JSON.parse(localStorage.getItem("medicine")) 
-  let container=document.getElementById("medicine-container")
-   function displayData(data)
-   {
-     container.innerHTML=""
-     
-      data.medicine.forEach((medi) => {
-      let medicineContainer=document.createElement("div")
-      let category=document.createElement("h4")
-      let rating=document.createElement("h5")
-      let discount=document.createElement("h5")
-      let id=document.createElement("p")
-      let image=document.createElement("img")
-      let name=document.createElement("h3")
-      let price=document.createElement("h4")
-      let addtocart=document.createElement("button")
-
-      category.innerText=medi.category;
-      rating.innerText=`${medi.rating}`;
-      id.innerText=medi.id;
-      image.src=medi.image;
-      name.innerText=medi.name;
-      price.innerText=`₹${medi.price}`;
-      addtocart.innerText="Add To Cart";
-      discount.innerText=`${medi.discount}%`
-      addtocart.addEventListener("click",()=>
-        {
-          if(checkDuplicate(medi))
-          {
-            alert("Already Added To Cart")
-          }
-          else{
-            MedicineCart.push({...medi})
-          localStorage.setItem("medicine",JSON.stringify(MedicineCart))
-          alert("Successfully added")
-          }
-        }) 
-     
-      medicineContainer.append(image,name,rating,discount,price,category,addtocart)
-      container.append(medicineContainer)
-      
-    });
-    console.log("display",data)
-  }
-
-     function checkDuplicate(medi)
-    {
-     for(let i=0;i<MedicineCart.length;i++)
-     {
-      if(MedicineCart[i].id==medi.id){
-        return true
-      }
-    }
-        return false
-     }
-      // displayData()
-
-

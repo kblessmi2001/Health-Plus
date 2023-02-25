@@ -5,39 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<style>
-    #medicine-container{
-        background-color: aqua;
-    }
-</style>
 
 
 
 <body>
-   
- <h1>Add To Cart</h1>
+   <a href="./index.html"></a>
+   <a href="./addToCart.html"></a>
+   <div style="display: flex;align-items: center;justify-content: center;">
+ <h1 style="text-align: center;color: #00b5b7;margin-top:40px;font-size: 50px;">
+  Add To Cart</h1>
+  <img style="width:5%;height:50px" src="https://tse4.mm.bing.net/th?id=OIP.fYPFuy5ypGwIotPEJMp_BAHaHa&pid=Api&P=0"   id="add" />
+  </div>
+  <h1 id="total"><span style="padding-left: 30px;">
+    Your Total cart Price is:- </span><span id="cart-total">0</span></h1>
+
+
+
+
  <div id="medicine-container">
 
  </div>
 </body>
 </html>
+
 <script>
-  async function fetchData(){
-   
-   try{
-     let res=await fetch("https://kblessmi2001.github.io/medicine_data/data.json")
-    
-     res= await res.json()
-         displayData(res)
-     
-     //  console.log(res.medicine)
-   }
-   catch(err){
-     console.log("error",err)
-   }
- }
-   fetchData()
+
 
  
      
@@ -47,25 +41,34 @@
    {
      container.innerHTML=""
      
-     MedicineCart.medicine.forEach((medi) => {
+     MedicineCart.forEach((medi) => {
       let medicineContainer=document.createElement("div")
       let category=document.createElement("h4")
+      category.className +="cate"
       let rating=document.createElement("h5")
+      rating.className +="rating"
       let discount=document.createElement("h5")
+      discount.className += "count"
       let id=document.createElement("p")
       let image=document.createElement("img")
       let name=document.createElement("h3")
       let price=document.createElement("h4")
       let deleted=document.createElement("button")
+      let buy=document.createElement("button")
+      
+      deleted.className+="del";
+      buy.className+="del"
 
       category.innerText=medi.category;
-      rating.innerText=`${medi.rating}`;
+      rating.innerText=`${medi.rating}  ★`;
       id.innerText=medi.id;
       image.src=medi.image;
       name.innerText=medi.name;
       price.innerText=`₹${medi.price}`;
      deleted.innerText="Delete";
-      discount.innerText=`${medi.discount}%`
+     buy.innerText="Buy"
+      discount.innerText="Discount:  "+`${medi.discount}%`
+    
     deleted.addEventListener("click",()=>
         {
             MedicineCart=MedicineCart.filter((ele)=>
@@ -75,14 +78,32 @@
             localStorage.setItem("medicine",JSON.stringify(MedicineCart))
             displayData()
         }) 
-     
-      medicineContainer.append(image,name,rating,discount,price,category,deleted)
+      buy.onclick = function () {
+        location.href = "./purchace.html";
+    }
+
+
+   
+        let sum=0;
+        for(let i=0;i<MedicineCart.length;i++){
+            sum+=MedicineCart[i].price
+         
+        }
+    // console.log(MedicineCart.length)
+    // console.log(sum)
+    document.getElementById("cart-total").textContent=sum;
+
+      medicineContainer.append(image,rating,name,discount,price,category,deleted,buy)
       container.append(medicineContainer)
       
     });
+
+   
     
   }
 
+
     displayData()
 </script>
+
 
