@@ -164,14 +164,14 @@ span.psw {
  
 }
 
-.close
+/* .close
 {
    padding-left:860px; 
 
 }
 .active, .dot:hover {
   background-color: #717171;
-}
+} */
 #card{
   display:flex;
   width: 90%;
@@ -198,7 +198,7 @@ span.psw {
 .log > #login{
     background-color: #00b5b7;
     height: 50px;
-    width: 700px;
+    /* width: 700px; */
     color: white;
     border: none;
     border-radius: 5px;
@@ -340,7 +340,7 @@ margin-bottom: 10px;
   margin: auto;
   width:70%;
  margin-left: 26px;
-margin-bottom: 20px;
+ margin-bottom: 20px;
 }
 .item{
   width: 90%;
@@ -395,24 +395,6 @@ margin-bottom: 20px;
 
 }
 
-/* .tab{
-  text-align: left;
- 
-  /* border: 2px solid white; */
-/* } */
-/* .gap{
-  padding:20px
-}
-.tab ,th , td{
-  
-  padding-left: 20px;
- } 
-th{
-  padding-bottom:20px
-}
-td{
-  color:#6a7777;
-} */ 
 .logo_image{
   width:20%;
   padding-bottom:20px;
@@ -553,27 +535,28 @@ li{
 
  #medicine-container{
   width:95%;
-  /* border:2px solid rebeccapurple; */
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap:20px;
   margin: auto;
-  /* width:95%; */
   margin: auto;
-  grid-row-gap:20px;
   font-size: 15px;
-  line-height: 25px;
   text-align: left;
-  background-color: #00b5b7;
+  margin-top: 50px;
+  
  }
  #medicine-container > div{
-  border:2px solid rgb(153, 83, 51);
+  /* border:2px solid rgb(153, 83, 51); */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   /* height: 700px; */
-  padding:20px
+  padding:20px;
+  border-radius: 10px;
+ }
+ #medicine-container > div:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
  }
  #medicine-container > div >img{
-  width:60%;
+  width:100%;
   margin: auto;
   display: block;
  }
@@ -581,11 +564,52 @@ li{
   font-size: 15px;
  }
  #medicine-container >div>button{
-  width:auto;
+  width:200px;
   display: block;
   margin: auto;
   margin-bottom: 20px;
+  /* display: flex; */
+  text-align: center;
  }
-.h5flex{
-display: flex;
+.nameEl{
+  font-size: 15px;
 }
+
+.addToCart{
+  border: 1px solid orange;
+  margin: auto;
+  background-color: #fff9f4;
+  color: orange;
+  width:100%;
+  
+}
+.addToCart:hover{
+  background-color: orange;
+  color: white;
+ 
+}
+.del{
+  background-color:#fff9f4 ;
+  margin: auto;
+  background-color: #fff9f4;
+  color: orange;
+  display: inline-block;
+  border: 1px solid orange;
+  /* display: flex; */
+  
+  
+}
+.del:hover{
+  background-color:  orange;
+  color: white;
+}
+.gap1>td:hover{
+  color: #00b5b7;
+  background-color: azure;
+}
+
+.gap1>th{
+  padding-bottom: 20px;
+}
+
+.mySlides {display:none;}

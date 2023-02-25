@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEALTHKART</title>
+    <title>HEALTHPLUS</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 <body>
@@ -18,7 +20,7 @@
         <input class="nosubmit" type="search" placeholder="Search for productus & brands...">
       </form>
       <div class="log">
-      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+      <button onclick="document.getElementById('id01').style.display='block'" >Login</button>
       <div id="id01" class="modal" >
         <div class="modal-content animate" >
           <div class="imgcontainer">
@@ -53,24 +55,38 @@
           </div>
         </div>
       </div>
-      <!-- <div class="icon" >
-        <img src="https://tse4.mm.bing.net/th?id=OIP.fYPFuy5ypGwIotPEJMp_BAHaHa&pid=Api&P=0"   id="addToCart" />
-      </div> -->
+     
       <a href="./addToCart.html"> <button  id="addToCart"><span style="font-size:15px;color:white;text-decoration:none;background-color:  #00b5b7;width:auto"></span>
 
         Add To Cart</button></a>
     </div>
     <hr>
     
-    <div class="middle_part">
-      <div class="dropdown">
-        <button class="shop">Shop by category </button>
-          <div class="dropdown-content">
+   
+        <!-- <button class="shop">Shop by category </button> -->
+          <!-- <div class="dropdown-content">
            
-            <div class="side">
-            <a href="#">Sports Nutrition</a>
-          
-            <table class="tab1" >
+            <div class="side"> -->
+              <div class="middle_part">
+              <select id="filter">
+                <option value="">Shop By Category</option>
+                <!-- <option value="Laptop">Laptop</option>
+                <option value="Mobile">Mobile</option>
+                <option value="Speakers">Speakers</option> -->
+             
+             <!-- <a id="shopFilter" href="#">Sports Nutrition</a> -->
+            <option value="Whey Protiens">Whey Protiens</option>
+            <option value="Weight Gainers">Weight Gainers</option>
+            <option value="Peanut Butter">Peanut Butter</option>
+            <option value="Pre-Workout">Pre-Workout</option>
+            <option value="Fat Barners">Fat Barners</option>
+            <option value="Whey Protiens Isolate">Whey Protiens Isolate</option>
+            <option value="Oats">Oats</option>
+            <option value="Raw Whey Protiens">Raw Whey Protiens</option>
+            <option value="Creatine">Creatine</option>
+            <option value="Fish Oil">Fish Oil</option> 
+          </select>
+            <!-- <table class="tab1" >
               <tr class="gap1">
               <th>Proteins</th>
               <th>Gainers</th>
@@ -150,7 +166,6 @@
             </tr>
        
             </table>
-     
           </div>
               <a href="#">Vitamins & Supplements</a>
               <a href="#">Ayurveda & Herbs</a>
@@ -158,9 +173,12 @@
               <a href="#">Fitness</a>
               <a href="#">Wellness</a>
           </div>
-      </div>
+      </div> -->
              
+     
+        <!-- <div class="dropdown"> -->
       <div class="dropdown">
+        <!-- <div class="side"> -->
         <button class="hover_txt">Best Sellers </button>
         <div class="dropdown-content">
           <a href="#">Sports Nutrition</a>
@@ -194,9 +212,11 @@
           <div>India's Largest D2C Nutrition Platform</div>
       </div>
     <div id="medicine-container">
-      
+
     </div>
-            <!-- <div class="heading">
+
+        
+            <div class="heading">
               <h1>Price Slash Alert</h1>
             </div>
 
@@ -207,7 +227,7 @@
                   <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
                 <div>HealthKart HK Vitals ACV 750 mg Effervescent, 15 tablet(s)...</div>
                 <div>&#8377 299</div>
-                <button class="addtocart">Add to Cart</button>
+                <button id="addtocart">Add to Cart</button>
               </div>
               </div> 
               <div class="division">
@@ -216,7 +236,7 @@
                   <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
                 <div>HealthKart HK Vitals ACV 750 mg Effervescent, 15 tablet(s)...</div>
                 <div>&#8377 299</div>
-                <button class="addtocart">Add to Cart</button>
+                <button id="addtocart">Add to Cart</button>
               </div>
               </div> 
               <div class="division">
@@ -225,7 +245,7 @@
                   <div class="star">5.0 <span style="font-size:125%;color:white;">&starf;</span></div>
                 <div>MuscleBlaze Fish Oil (1000 mg) OP, 60 softgels</div>
                 <div>&#8377 399</div>
-                <button class="addtocart">Add to Cart</button>
+                <button id="addtocart">Add to Cart</button>
               </div> 
             </div>
               <div class="division">
@@ -234,7 +254,7 @@
                   <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
                 <div>MuscleBlaze Super Gainer XXL OP old, 6.6 lb Chocolate</div>
                 <div>&#8377 2,349</div>
-                <button class="addtocart">Add to Cart</button>
+                <button id="addtocart">Add to Cart</button>
               </div>
             </div>
          </div>
@@ -265,7 +285,7 @@
               <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
               <div>MB Fuel One Whey Protein Immunity+,  2.2 lb  Chocolate </div>
               <div>&#8377 299</div>
-              <button class="addtocart">Add to Cart</button>
+              <button id="addtocart">Add to Cart</button>
             </div>
           </div> 
           <div class="division">
@@ -274,7 +294,7 @@
               <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
             <div>MuscleBlaze Pre Workout Ripped, Raspberry Lemonade </div>
             <div>&#8377 299</div>
-            <button class="addtocart">Add to Cart</button>
+            <button id="addtocart">Add to Cart</button>
           </div>
           </div> 
           <div class="division">
@@ -283,7 +303,7 @@
               <div class="star">5.0 <span style="font-size:125%;color:white;">&starf;</span></div>
             <div>MuscleBlaze Fish Oil (1000 mg) </div>
             <div>&#8377 399</div>
-            <button class="addtocart">Add to Cart</button>
+            <button id="addtocart">Add to Cart</button>
           </div> 
         </div>
           <div class="division">
@@ -292,15 +312,22 @@
               <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
             <div>MuscleBlaze High Protein Oats,  2 kg  Dark Chocolate </div>
             <div>&#8377 2,349</div>
-            <button class="addtocart">Add to Cart</button>
+            <button id="addtocart">Add to Cart</button>
           </div>
         </div>
    </div>
+
+   <div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides" src="https://img1.hkrtcdn.com/24436/bnr_2443520_o.jpg" style="width:100%">
+    <img class="mySlides" src="https://img7.hkrtcdn.com/24482/bnr_2448136_o.jpg" style="width:100%">
+    <img class="mySlides" src="https://img7.hkrtcdn.com/24472/bnr_2447166_o.jpg" style="width:100%">
+  </div>
    <div id="medicine-container">
-    <h5 class="h5flex"></h5>
-   </div> -->
+    
+
+   </div> 
    
-   <!-- <div class="heading1">
+   <div class="heading1">
    
    <h1>Top Selling Combos</h1>
    </div>
@@ -329,7 +356,7 @@
       <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
     <div>MuscleBlaze High Protein Peanut Butter,  1 kg  Dark Chocolate Creamy </div>
     <div>&#8377 299</div>
-    <button class="addtocart">Add to Cart</button>
+    <button id="addtocart">Add to Cart</button>
   </div>
   </div> 
   <div class="division">
@@ -338,7 +365,7 @@
       <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
     <div>MuscleBlaze High Protein Muesli,  1 kg  Dark Chocolate &amp; Cranberry </div>
     <div>&#8377 299</div>
-    <button class="addtocart">Add to Cart</button>
+    <button id="addtocart">Add to Cart</button>
   </div>
   </div> 
   <div class="division">
@@ -347,7 +374,7 @@
       <div class="star">5.0 <span style="font-size:125%;color:white;">&starf;</span></div>
     <div>Myfitness Chocolate Peanut Butter,  1.2 kg  Smooth </div>
     <div>&#8377 399</div>
-    <button class="addtocart">Add to Cart</button>
+    <button id="addtocart">Add to Cart</button>
   </div> 
 </div>
   <div class="division">
@@ -356,7 +383,7 @@
       <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
     <div>MuscleBlaze High Protein Oats,  1 kg  Dark Chocolate </div>
     <div>&#8377 2,349</div>
-    <button class="addtocart">Add to Cart</button>
+    <button id="addtocart">Add to Cart</button>
   </div>
 </div>
 </div>
@@ -393,7 +420,7 @@
     <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
   <div>ON (Optimum Nutrition) Micronized Creatine Powder,  Unflavoured  0.55 lb </div> 
   <div>&#8377 299</div>
-  <button class="addtocart">Add to Cart</button>
+  <button id="addtocart">Add to Cart</button>
 </div>
 </div> 
 <div class="division">
@@ -402,7 +429,7 @@
     <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
   <div>GNC Creatine Monohydrate,  Unflavoured  0.55 lb </div> 
   <div>&#8377 299</div>
-  <button class="addtocart">Add to Cart</button>
+  <button id="addtocart">Add to Cart</button>
 </div>
 </div> 
 <div class="division">
@@ -411,7 +438,7 @@
     <div class="star">5.0 <span style="font-size:125%;color:white;">&starf;</span></div>
   <div>MuscleTech Platinum 100% Creatine,  Unflavoured  0.88 lb </div>
   <div>&#8377 399</div>
-  <button class="addtocart">Add to Cart</button>
+  <button id="addtocart">Add to Cart</button>
 </div> 
 </div>
 <div class="division">
@@ -420,10 +447,12 @@
     <div class="star">4.5 <span style="font-size:125%;color:white;">&starf;</span></div>
   <div>Cellucor C4 Explosive Preworkout,  0.85 lb  Watermelon </div>
   <div>&#8377 2,349</div>
-  <button class="addtocart">Add to Cart</button>
+  <button id="addtocart">Add to Cart</button>
 </div>
 </div>
-</div> -->
+</div>
+
+
         
 
             <div id="brand">
@@ -667,5 +696,103 @@
 </body>
 </html>
 <script src="./index.js"></script>
+<script>
+  async function fetchData(){
+   
+    try{
+      let res=await fetch("https://kblessmi2001.github.io/medicine_data/data.json")
+     
+      res= await res.json()
+          displayData(res)
+      
+      //  console.log(res.medicine)
+    }
+    catch(err){
+      console.log("error",err)
+    }
+  }
+    fetchData()
+let divide=document.getElementById("divide")
+     
+  let MedicineCart=JSON.parse(localStorage.getItem("medicine"))  || []
+  let container=document.getElementById("medicine-container")
+   function displayData(data)
+   {
+     container.innerHTML=""
+     
+      data.medicine.forEach((medi) => {
+      let medicineContainer=document.createElement("div")
+      let category=document.createElement("h4")
+      category.className +="cate"
+      let rating=document.createElement("h5")
+      rating.className +="rating"
+      let discount=document.createElement("h5")
+      discount.className += "count"
+      let id=document.createElement("p")
+      let image=document.createElement("img")
+      image.className+="image"
+      let name=document.createElement("h2")
+      name.className +="nameEl"
+      let price=document.createElement("h4")
+      let addtocart=document.createElement("button")
+      addtocart.className+="addToCart"
 
- 
+      category.innerText=medi.category;
+      rating.innerText=`${medi.rating}  ★`;
+      id.innerText=medi.id;
+      image.src=medi.image;
+      name.innerText=medi.name;
+      price.innerText=`₹${medi.price}`;
+      addtocart.innerText="Add To Cart";
+      discount.innerText="Discount:  " + `${medi.discount}%`
+      addtocart.addEventListener("click",()=>
+        {
+          if(checkDuplicate(medi))
+          {
+            alert("Already Added To Cart")
+          }
+          else{
+            MedicineCart.push({...medi})
+          localStorage.setItem("medicine",JSON.stringify(MedicineCart))
+          alert("Successfully added")                         
+          }
+        }) 
+        let filterBy=document.getElementById("filter")
+        filterBy.addEventListener("change",()=>{
+          fetchData()
+        })
+        function filterData(data)
+        {
+          if(filterBy.value==="")
+          {
+            displayData(data.medicine)
+          }
+          else{
+            data=data.filter((ele)=>{
+              return ele.category==filterBy.value
+            })
+            displayData()
+          }
+        }
+        
+      medicineContainer.append(image,rating,name,discount,price,category,addtocart)
+      container.append(medicineContainer)
+      
+    });
+    // console.log("display",data)
+  }
+
+     function checkDuplicate(medi)
+    {
+     for(let i=0;i<MedicineCart.length;i++)
+     {
+      if(MedicineCart[i].id==medi.id){
+        return true
+      }
+    }
+        return false
+     }
+    
+
+     
+    </script>
