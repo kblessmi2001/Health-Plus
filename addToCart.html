@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add To Cart</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -14,7 +14,7 @@
    <a href="./index.html"></a>
    <a href="./addToCart.html"></a>
    <div style="display: flex;align-items: center;justify-content: center;">
- <h1 style="text-align: center;color: #00b5b7;margin-top:40px;font-size: 50px;">
+ <h1 style="text-align: center;color: #00b5b7;font-size: 50px;">
   Add To Cart</h1>
   <img style="width:5%;height:50px" src="https://tse4.mm.bing.net/th?id=OIP.fYPFuy5ypGwIotPEJMp_BAHaHa&pid=Api&P=0"   id="add" />
   </div>
@@ -79,30 +79,32 @@
             displayData()
         }) 
       buy.onclick = function () {
-        location.href = "./purchace.html";
+        location.href = "./payment.html";
     }
 
-
-   
+let buying=[]
+    buy.addEventListener("click",()=>{
+      let bought=MedicineCart.filter((ele)=>
+            {
+                return ele.id == medi.id
+            })
+     buying.push({...bought[0]})
+            localStorage.setItem("selectedBoughtProduct",JSON.stringify(buying))
+        }) 
+  
         let sum=0;
         for(let i=0;i<MedicineCart.length;i++){
             sum+=MedicineCart[i].price
          
         }
-    // console.log(MedicineCart.length)
-    // console.log(sum)
+    
     document.getElementById("cart-total").textContent=sum;
 
       medicineContainer.append(image,rating,name,discount,price,category,deleted,buy)
       container.append(medicineContainer)
       
     });
-
-   
-    
   }
-
-
     displayData()
 </script>
 

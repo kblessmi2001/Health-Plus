@@ -6,21 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEALTHPLUS</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
- 
+  
+<a href="./signup.html"></a>
   <div id="container">
     <div  class="logo">
       <img class="logo_img" src="./HEALTH PLUS (3).png" alt="">
     </div>
-      <form class="nosubmit">
-        <input class="nosubmit" type="search" placeholder="Search for productus & brands...">
-      </form>
+
+      <div id="search">
+        <input type="text" id="search-inp" placeholder="Search for productus & brands..."/>
+        <button id="search-btn">Search</button>
+      </div>
+      <a id="sign" href="./signup.html"><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;margin-left: 30px;">Sign Up</button></a>
       <div class="log">
       <button onclick="document.getElementById('id01').style.display='block'" >Login</button>
+     
       <div id="id01" class="modal" >
         <div class="modal-content animate" >
           <div class="imgcontainer">
@@ -48,6 +52,8 @@
                   <input type="password" placeholder="Enter Password" id="password" required>
                     
                   <button type="submit">Submit</button>
+                 <p>Already have an account</p> <a id="signup" href="./signup.html">Signup</a>
+                
                 </form>
                
               </div>
@@ -55,158 +61,65 @@
           </div>
         </div>
       </div>
-     
+  
       <a href="./addToCart.html"> <button  id="addToCart"><span style="font-size:15px;color:white;text-decoration:none;background-color:  #00b5b7;width:auto"></span>
 
         Add To Cart</button></a>
     </div>
     <hr>
-    
-   
-        <!-- <button class="shop">Shop by category </button> -->
-          <!-- <div class="dropdown-content">
-           
-            <div class="side"> -->
-              <div class="middle_part">
-              <select id="filter">
-                <option value="">Shop By Category</option>
-                <!-- <option value="Laptop">Laptop</option>
-                <option value="Mobile">Mobile</option>
-                <option value="Speakers">Speakers</option> -->
-             
-             <!-- <a id="shopFilter" href="#">Sports Nutrition</a> -->
-            <option value="Whey Protiens">Whey Protiens</option>
-            <option value="Weight Gainers">Weight Gainers</option>
-            <option value="Peanut Butter">Peanut Butter</option>
-            <option value="Pre-Workout">Pre-Workout</option>
-            <option value="Fat Barners">Fat Barners</option>
-            <option value="Whey Protiens Isolate">Whey Protiens Isolate</option>
-            <option value="Oats">Oats</option>
-            <option value="Raw Whey Protiens">Raw Whey Protiens</option>
-            <option value="Creatine">Creatine</option>
-            <option value="Fish Oil">Fish Oil</option> 
-          </select>
-            <!-- <table class="tab1" >
-              <tr class="gap1">
-              <th>Proteins</th>
-              <th>Gainers</th>
-              <th>Protein Food</th>
-              <th>Pre/Post Workout</th>
-              <th>Workout Essentials</th>
-            </tr>
-            <tr class="gap1">
-              <td>Whey Protiens</td>
-              <td>Weight Gainers</td>
-              <td>Peanut Butter</td>
-              <td>Pre-Workout</td>
-              <td>Fat Barners</td>
-            </tr>
-            <tr class="gap1">
-              <td>Beginners Whey Protien</td>
-              <td>Mass Gainers</td>
-              <td>Muesh</td>
-              <td>Creatine</td>
-              <td>Consult Sevice</td>
-            </tr>
-            <tr class="gap1">
-              <td>Whey Protiens Isolate</td>
-              <td>Heral Weight Gainers</td>
-              <td>Protien Shakes</td>
-              <td>Beta Alanine</td>
-              <td>L Carnitine</td>
-            </tr>
-            <tr class="gap1">
-              <td>Raw Whey Protiens</td>
-              <td></td>
-              <td>Oats</td>
-              <td>BCAAs</td>
-              <td>Multivitamins for</td>
-            </tr>
-            <tr class="gap1">
-              <td>Plant Protiens</td>
-              <td></td>
-              <td>Cereals</td>
-              <td>Carb Blends</td>
-              <td>Body Building</td>
-            </tr>
-            <tr class="gap1">
-              <td>Protiens for Women</td>
-              <td></td>
-              <td>Granola</td>
-              <td>Electrolytes</td>
-              <td>Pre Hormone</td>
-            </tr>
-            <tr class="gap1">
-              <td>Proties Blends</td>
-              <td></td>
-              <td>Protien Bars</td>
-              <td>EAA</td>
-              <td>ZMA</td>
-            </tr>
-            <tr class="gap1">
-              <td>Casein Proteins</td>
-              <td></td>
-              <td>Protien Water</td>
-              <td>Nitric Oxide</td>
-              <td></td>
-            </tr>
-            <tr class="gap1">
-              <td>Soy Protiens</td>
-              <td></td>
-              <td></td>
-              <td>Other Supports</td>
-              <td></td>
-            </tr>
-            <tr class="gap1">
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>Cirtulline Malate</td>
-              <td></td>
-            </tr>
+          
+        <div class="middle_part">
+         <select id="filter">
+          <option value="">Shop By Category</option>
+      <option value="Whey Proteins">Whey Proteins</option>
+      <option value="Mass Gainers">Mass Gainers</option>
+      <option value="Pre-Workout">Pre-Workout</option>
+      <option value="Whey Protein for Beginners">Whey Protein for Beginners</option>
+      <option value="Whey Protein Isolate">Whey Protein Isolate</option>
+      <option value="Oats">Oats</option>
+      <option value="Raw Whey Proteins">Raw Whey Proteins</option>
+      <option value="Creatine">Creatine</option>
+      <option value="Fish Oil">Fish Oil</option> 
+    </select>
        
-            </table>
-          </div>
-              <a href="#">Vitamins & Supplements</a>
-              <a href="#">Ayurveda & Herbs</a>
-              <a href="#">Health Food & Drinks</a>
-              <a href="#">Fitness</a>
-              <a href="#">Wellness</a>
-          </div>
-      </div> -->
-             
-     
-        <!-- <div class="dropdown"> -->
-      <div class="dropdown">
-        <!-- <div class="side"> -->
-        <button class="hover_txt">Best Sellers </button>
-        <div class="dropdown-content">
-          <a href="#">Sports Nutrition</a>
-            <a href="#">Health Nutrition</a>
-            <a href="#">Fitness</a>
-            <a href="#">Wellness</a>
-        </div>
-      </div>
-      <div class="hover_txt">Brands</div>
-      <div class="hover_txt"> Deals</div>
-      <div class="hover_txt"> Blogs</div>
-      <div class="hover_txt">Gift Card</div>
-      <div class="dropdown">
-        <button class="hover_txt" >Customer Support </button>
-          <div class="dropdown-content">
-            <a href="#">Chat with us</a>
-            <a href="#">Ask our Experts</a>
-            <a href="#">Return policy</a>
-            <a href="#">FAQs</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#"><div class="address">
-                For Support & Order Enquiries
-                Call us at : 0124-4616444
-                10 AM to 7 PM</div></a>
-          </div>
-      </div>
-      <div class="hover_txt">Store Locator</div>
+  <div class="dropdown">
+    <button class="hover_txt">Best Sellers </button>
+    <div class="dropdown-content">
+      <a href="#">Sports Nutrition</a>
+        <a href="#">Health Nutrition</a>
+        <a href="#">Fitness</a>
+        <a href="#">Wellness</a>
     </div>
+  </div>
+  <div class="hover_txt">Brands</div>
+  <div class="hover_txt"> Deals</div>
+  <div class="hover_txt"> Blogs</div>
+  <div class="hover_txt">Gift Card</div>
+
+  <select id="sortFilter">
+  <option value="">Sort</option>
+  <option value="Low to High">Low to High</option>
+  <option value="High to Low">High to Low</option>
+</select>
+
+
+  <div class="dropdown">
+    <button class="hover_txt" >Customer Support </button>
+      <div class="dropdown-content">
+        <a href="#">Chat with us</a>
+        <a href="#">Ask our Experts</a>
+        <a href="#">Return policy</a>
+        <a href="#">FAQs</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#"><div class="address">
+            For Support & Order Enquiries
+            Call us at : 0124-4616444
+            10 AM to 7 PM</div></a>
+      </div>
+  </div>
+  <div class="hover_txt">Store Locator</div>
+</div>
+</section>
 
         <div class="sent">
           <div>India's Largest D2C Nutrition Platform</div>
@@ -215,7 +128,6 @@
 
     </div>
 
-        
             <div class="heading">
               <h1>Price Slash Alert</h1>
             </div>
@@ -317,16 +229,7 @@
         </div>
    </div>
 
-   <div class="w3-content w3-section" style="max-width:500px">
-    <img class="mySlides" src="https://img1.hkrtcdn.com/24436/bnr_2443520_o.jpg" style="width:100%">
-    <img class="mySlides" src="https://img7.hkrtcdn.com/24482/bnr_2448136_o.jpg" style="width:100%">
-    <img class="mySlides" src="https://img7.hkrtcdn.com/24472/bnr_2447166_o.jpg" style="width:100%">
-  </div>
-   <div id="medicine-container">
-    
-
-   </div> 
-   
+  
    <div class="heading1">
    
    <h1>Top Selling Combos</h1>
@@ -387,8 +290,6 @@
   </div>
 </div>
 </div>
-
-
 
 <div class="heading1">
    
@@ -572,62 +473,7 @@
                     </div>
                   </div>
                 </div> 
-              <!-- <tr class="gap">
-                <th>Health Plus</th>
-                <th>Brands</th>
-                <th>Health Fitness</th>
-                <th>Quick Links</th>
-                <th>Contact Us</th>
-              </tr>
-             <tr class="gap">
-              <td>About Us</td>
-              <td>MuscleBlaze</td>
-              <td>Hair & Skun Care</td>
-              <td>My Account</td>
-              <td>care@healthplus.com</td>
-             </tr>
-            
-
-              <tr class="gap">
-                <td>Contact Us</td>
-                <td>Fit Foods</td>
-                <td>Sports Nutrition</td>
-                <td>Track Your Order</td>
-                <td>01234-4616444</td>
-               </tr>
               
-               <tr class="gap">
-                <td>Refer & Earn</td>
-                <td>HK Foods</td>
-                <td>Vitamins & Supplements</td>
-                <td>Store Locator</td>
-                <td>The Presidency</td>
-               </tr>
-
-               <tr class="gap">
-                <td>Loyalty Program</td>
-                <td>True Basics</td>
-                <td>Ayurveda & Herbs</td>
-                <td>HK Cash</td>
-                <td>Tower, Tower-B</td>
-               </tr>
-
-               <tr class="gap">
-                <td>Blogs, Videos & More</td>
-                <td>Critzo</td>
-                <td>Ayurveda & Herbs</td>
-                <td>HK Coupons</td>
-                <td>2nd Floor</td>
-               </tr>
-
-               <tr class="gap">
-                <td>Brand Directory</td>
-                <td>bGREEN</td>
-                <td>Fitness</td>
-                <td>FAQS</td>
-                <td>Haryana</td>
-               </tr>
-            </table> -->
             <div id="subscribe">
             <div>
               <h4 style="padding-left: 20px;">Subscribe</h4>
@@ -697,13 +543,17 @@
 </html>
 <script src="./index.js"></script>
 <script>
+  
+  let medicineApiResult;
   async function fetchData(){
    
     try{
       let res=await fetch("https://kblessmi2001.github.io/medicine_data/data.json")
      
       res= await res.json()
-          displayData(res)
+      medicineApiResult=res.medicine;
+      localStorage.setItem("medicineApiResult",JSON.stringify(medicineApiResult))
+          displayData(res.medicine)
       
       //  console.log(res.medicine)
     }
@@ -712,15 +562,37 @@
     }
   }
     fetchData()
-let divide=document.getElementById("divide")
-     
-  let MedicineCart=JSON.parse(localStorage.getItem("medicine"))  || []
+
+
+
+  
+  // if(!medicineApiResult)
+  // {
+     medicineApiResult=JSON.parse(localStorage.getItem("medicineApiResult"))  || []
+  // }
+  // let medicineApiResult=JSON.parse(localStorage.getItem("medicineApiResult"))  || []
   let container=document.getElementById("medicine-container")
+  let searchButton=document.getElementById("search-btn")
+        searchButton.addEventListener("click",()=>{
+          let searchInput=document.getElementById("search-inp").value
+        let filteredSearchResult=medicineApiResult.filter((ele)=>ele.name.includes(searchInput))
+        if(filteredSearchResult)
+        {
+          document.getElementById("search-inp").value=""
+          displayData(filteredSearchResult)
+        }
+        else{
+          alert("No result")
+          document.getElementById("search-inp").value=""
+          
+        }
+        })
+      let  MedicineCart=JSON.parse(localStorage.getItem("medicine"))  || []
    function displayData(data)
    {
      container.innerHTML=""
      
-      data.medicine.forEach((medi) => {
+      data.forEach((medi) => {
       let medicineContainer=document.createElement("div")
       let category=document.createElement("h4")
       category.className +="cate"
@@ -734,17 +606,23 @@ let divide=document.getElementById("divide")
       let name=document.createElement("h2")
       name.className +="nameEl"
       let price=document.createElement("h4")
+      price.className+="price"
       let addtocart=document.createElement("button")
       addtocart.className+="addToCart"
+      let wishlist=document.createElement("button")
+
+
 
       category.innerText=medi.category;
-      rating.innerText=`${medi.rating}  ★`;
+      rating.innerText=`${medi.rating} ★`;
       id.innerText=medi.id;
       image.src=medi.image;
       name.innerText=medi.name;
       price.innerText=`₹${medi.price}`;
       addtocart.innerText="Add To Cart";
       discount.innerText="Discount:  " + `${medi.discount}%`
+      wishlist.textConteht="Wishlist"
+
       addtocart.addEventListener("click",()=>
         {
           if(checkDuplicate(medi))
@@ -757,29 +635,76 @@ let divide=document.getElementById("divide")
           alert("Successfully added")                         
           }
         }) 
-        let filterBy=document.getElementById("filter")
-        filterBy.addEventListener("change",()=>{
-          fetchData()
-        })
-        function filterData(data)
+
+
+        wishlist.addEventListener("click",()=>
         {
-          if(filterBy.value==="")
+          if(checkDuplicate(medi))
           {
-            displayData(data.medicine)
+            alert("Already Added To Wishlist")
           }
           else{
-            data=data.filter((ele)=>{
-              return ele.category==filterBy.value
-            })
-            displayData()
+            MedicineCart.push({...medi})
+          localStorage.setItem("wishlist",JSON.stringify(wish))
+          alert("Added to the Wishlist")                         
           }
+        }) 
+
+
+
+        let totalApiResult=JSON.parse(localStorage.getItem("medicineApiResult")) || []
+         let filterByDropDown=document.getElementById("filter")
+       
+        filterByDropDown.addEventListener("change",()=>{
+
+        let selectedOption= document.getElementById('filter').selectedOptions[0].value;
+        if(selectedOption=="")
+        {
+          displayData(totalApiResult)
+        }
+      else{
+        let filtered= totalApiResult.filter((ele)=>ele.category==selectedOption)
+        if(filtered)
+        {
+          displayData(filtered)
+        }
+         
+      }
+      })
+    let sortPriceDropDown=document.getElementById("sortFilter")
+    
+    sortPriceDropDown.addEventListener("change",function()
+   {
+    let sortPrice= document.getElementById('sortFilter').selectedOptions[0].value;
+    if(sortPrice=="")
+        {
+          displayData(totalApiResult)
+        }
+    
+      if(sortPrice=="High to Low"){
+            let sortPriceEle=medicineApiResult.sort(function(a,b){
+            return b.price-a.price;
+           
+          })
+          console.log(sortPriceEle)
+          displayData(sortPriceEle)
         }
         
+        if(sortPrice=="Low to High"){
+          let sortPriceEle=medicineApiResult.sort(function(a,b){
+            return a.price-b.price
+          
+          })
+          console.log(sortPriceEle)
+          displayData(sortPriceEle)
+        }
+
+      })
       medicineContainer.append(image,rating,name,discount,price,category,addtocart)
       container.append(medicineContainer)
       
     });
-    // console.log("display",data)
+     console.log("display",data)
   }
 
      function checkDuplicate(medi)
@@ -793,6 +718,6 @@ let divide=document.getElementById("divide")
         return false
      }
     
-
+    
      
     </script>
