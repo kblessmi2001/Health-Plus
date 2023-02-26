@@ -562,15 +562,10 @@
     }
   }
     fetchData()
-
-
-
   
-  // if(!medicineApiResult)
-  // {
+ 
      medicineApiResult=JSON.parse(localStorage.getItem("medicineApiResult"))  || []
-  // }
-  // let medicineApiResult=JSON.parse(localStorage.getItem("medicineApiResult"))  || []
+
   let container=document.getElementById("medicine-container")
   let searchButton=document.getElementById("search-btn")
         searchButton.addEventListener("click",()=>{
@@ -633,20 +628,6 @@
             MedicineCart.push({...medi})
           localStorage.setItem("medicine",JSON.stringify(MedicineCart))
           alert("Successfully added")                         
-          }
-        }) 
-
-
-        wishlist.addEventListener("click",()=>
-        {
-          if(checkDuplicate(medi))
-          {
-            alert("Already Added To Wishlist")
-          }
-          else{
-            MedicineCart.push({...medi})
-          localStorage.setItem("wishlist",JSON.stringify(wish))
-          alert("Added to the Wishlist")                         
           }
         }) 
 
