@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkout Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -17,7 +17,7 @@
     gap: 20px;
     align-items: center;
     background-color:lightgray;
-    margin-top: 100px;
+    margin-top: 20px;
     border-radius: 20px;
   }
   #name,#address,#number{
@@ -32,10 +32,26 @@
     border-radius: 5px;
 
   }
+  .logoOfPay{
+    display: flex;
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-size: 35px;
+ 
+}
+
+.tick-icon  {
+  width:50px;
+
+}
 </style>
 
 <body>
-    <div id="checkout-container">
+  <div class="logoOfPay">
+  <div class="col-xs-3 steps "><img class="tick-icon" alt="tick" src="https://cdn-icons-png.flaticon.com/128/4379/4379581.png"><div class="header-cart-grey-heading"><b>Checkout</b></div></div>
+</div>
+  <div id="checkout-container">
         <h1>Checkout</h1>
         <input type="number" id="number" placeholder="Number" required/>
         <input type="text" id="address" placeholder="Address" required/>
