@@ -630,10 +630,54 @@
           alert("Successfully added")                         
           }
         }) 
+      medicineContainer.append(image,rating,name,discount,price,category,addtocart)
+      container.append(medicineContainer)
+      
+    });
+   
+  }
+
+     function checkDuplicate(medi)
+    {
+     for(let i=0;i<MedicineCart.length;i++)
+     {
+      if(MedicineCart[i].id==medi.id){
+        return true
+      }
+    }
+        return false
+  }
+     medicineApiResult=JSON.parse(localStorage.getItem("medicineApiResult"))  || []
 
 
-
-        let totalApiResult=JSON.parse(localStorage.getItem("medicineApiResult")) || []
+     let sortPriceDropDown=document.getElementById("sortFilter")
+    
+    sortPriceDropDown.addEventListener("change",function()
+   {
+    let sortPrice= document.getElementById('sortFilter').selectedOptions[0].value;
+    if(sortPrice=="")
+        {
+          displayData( totalApiResult)
+        }
+    
+      if(sortPrice=="High to Low"){
+            let sortPriceEle=medicineApiResult.sort(function(a,b){
+            return b.price-a.price;
+           
+          })
+          displayData(sortPriceEle)
+        }
+        
+        if(sortPrice=="Low to High"){
+          let sortPriceEle=medicineApiResult.sort(function(a,b){
+            return a.price-b.price
+          
+          })
+          // console.log(sortPriceEle)
+          displayData(sortPriceEle)
+        }
+      })
+      let totalApiResult=JSON.parse(localStorage.getItem("medicineApiResult")) || []
          let filterByDropDown=document.getElementById("filter")
        
         filterByDropDown.addEventListener("change",()=>{
@@ -652,53 +696,5 @@
          
       }
       })
-    let sortPriceDropDown=document.getElementById("sortFilter")
-    
-    sortPriceDropDown.addEventListener("change",function()
-   {
-    let sortPrice= document.getElementById('sortFilter').selectedOptions[0].value;
-    if(sortPrice=="")
-        {
-          displayData(totalApiResult)
-        }
-    
-      if(sortPrice=="High to Low"){
-            let sortPriceEle=medicineApiResult.sort(function(a,b){
-            return b.price-a.price;
-           
-          })
-          console.log(sortPriceEle)
-          displayData(sortPriceEle)
-        }
-        
-        if(sortPrice=="Low to High"){
-          let sortPriceEle=medicineApiResult.sort(function(a,b){
-            return a.price-b.price
-          
-          })
-          console.log(sortPriceEle)
-          displayData(sortPriceEle)
-        }
-
-      })
-      medicineContainer.append(image,rating,name,discount,price,category,addtocart)
-      container.append(medicineContainer)
-      
-    });
-     console.log("display",data)
-  }
-
-     function checkDuplicate(medi)
-    {
-     for(let i=0;i<MedicineCart.length;i++)
-     {
-      if(MedicineCart[i].id==medi.id){
-        return true
-      }
-    }
-        return false
-     }
-    
-    
      
     </script>
